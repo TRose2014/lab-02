@@ -24,12 +24,12 @@ Finish time: 11:45am
 Actual time needed to complete: 3 hours
 
 #Feature #3
-Number and name of feature: ________________________________
+Number and name of feature: Feature #3: Style the application
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 55 minutes
 
-Start time: _____
+Start time: 12:05
 
-Finish time: _____
+Finish time: 12:50
 
-Actual time needed to complete: _____
+Actual time needed to complete: 45 minutes
