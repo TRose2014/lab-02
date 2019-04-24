@@ -15,13 +15,13 @@ Actual time needed to complete: 25 minutes
 #Feature #2
 Number and name of feature: Feature #2 Filter images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 8:45am
 
-Finish time: _____
+Finish time: 11:45am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3 hours
 
 #Feature #3
 Number and name of feature: ________________________________
