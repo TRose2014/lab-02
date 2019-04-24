@@ -16,18 +16,15 @@ HornBeasts.prototype.render = function() {
   let hornBeastClone = $('#photo-template').clone();
   let $hornBeastClone = $(hornBeastClone[0].content);
 
-
-
   //Give content beasts
 
   $hornBeastClone.find('h2').text(this.title);
   $hornBeastClone.find('img').attr('src', this.image_url);
+  $hornBeastClone.find('img').attr('value', this.keyword);
   $hornBeastClone.find('p').text(this.description);
-  $hornBeastClone.find('option').attr('option', this.keyword);
 
   //Append beasts
   $hornBeastClone.appendTo('main');
-
 };
 
 HornBeasts.readJson = () => {
@@ -51,18 +48,17 @@ HornBeasts.createKeywords = () => {
   HornBeasts.allhornBeast.forEach(element => {
     if(keywordObj[element.keyword] !== element.keyword){
       keywordObj[element.keyword] = element.keyword;
-      let select = $('#optionsList').clone();
-      let $select = $(select[0].content);
-
-      $select.find('option').attr('value', element.keyword);
-      console.log(element.keyword);
-
-      $select.appendTo('#head');
-
-
+      $('#optionsList').append(`<option value="${element.keyword}">${element.keyword}</option>'`);
     }
   });
-  console.log(keywordObj);
+  $('#optionsList').on('change', queryBeasts);
+};
+
+let queryBeasts = (event) => {
+  $('section').hide();
+
+  let img = $(`img[value="${event.target.value}"]`).parent();
+  $(img).show();
 };
 
 $(()=> HornBeasts.readJson());
