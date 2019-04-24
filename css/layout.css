@@ -3,3 +3,10 @@ img{
   height: auto;
   border: 10px rgb(21, 55, 6) solid;
  }
+section{
+  float: left;
+}
+
+footer{
+  clear: both;
+}
