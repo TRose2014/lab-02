@@ -4,25 +4,34 @@
     <title>The Gallery of Horns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <link rel= "stylesheet" type ="text/css" href= "./css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
     <link rel= "stylesheet" type ="text/css" href= "./css/base.css">
   </head>
   <body>
     <header id= "head">
       <h1>The Gallery of Horns</h1>
+      <nav>
+        <ul class="navigation">
+          <li id="galOne">Gallery 1</li>
+          <li id="galTwo">Gallery 2</li>
+        </ul>
+      </nav>
       <select id="optionsList">
-        <option value="default">Filter by Keyword</option>
       </select>
     </header>
+
     <main>
-      <template id ="photo-template"> 
+      <template id="photo-template"> 
         <section>
             <h2></h2>
             <img src="" alt="">
             <p></p>
         </section>
-    </template>  
+    </template> 
     </main>
+
     <footer>
       &copy; 2018 Code Fellows
     </footer>

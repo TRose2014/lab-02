@@ -1,6 +1,5 @@
 'use strict';
 
-
 function HornBeasts(hornBeast){
   this.image_url = hornBeast.image_url;
   this.title = hornBeast.title;
@@ -23,13 +22,12 @@ HornBeasts.prototype.render = function() {
   $hornBeastClone.find('img').attr('value', this.keyword);
   $hornBeastClone.find('p').text(this.description);
 
-
   //Append beasts
   $hornBeastClone.appendTo('main');
 };
 
-HornBeasts.readJson = () => {
-  $.get('../data/page-1.json')
+HornBeasts.readJson = (str) => {
+  $.get(str)
     .then(data => {
       data.forEach(element => {
         HornBeasts.allhornBeast.push(new HornBeasts(element));
@@ -70,4 +68,17 @@ let queryBeasts = (event) => {
   $(img).show();
 };
 
-$(()=> HornBeasts.readJson());
+$('li').click((event) => {
+  HornBeasts.allhornBeast = [];
+
+  $('main').empty();
+  $('main').append('<template id="photo-template"><section><h2></h2><img src="" alt=""><p></p></section></template>');
+
+  if (event.target.id === 'galOne') {
+    HornBeasts.readJson('../data/page-1.json');
+  } else {
+    HornBeasts.readJson('../data/page-2.json');
+  }
+});
+
+$(()=> HornBeasts.readJson('../data/page-1.json'));
