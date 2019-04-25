@@ -44,3 +44,29 @@ Start time: 8:10
 Finish time: 10:00
 
 Actual time needed to complete: 2 hrs
+
+##Lab 3
+
+#Feature #1
+Number and name of feature: Feature 1: Pagination
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 8:20am
+
+Finish time: 10:00am
+
+Actual time needed to complete: 1 hour 40 minutes
+
+#Feature #2
+
+Number and name of feature: Feature 2: Templating
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 10:02am
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
