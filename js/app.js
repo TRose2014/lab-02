@@ -38,6 +38,14 @@ HornBeasts.readJson = () => {
 };
 
 HornBeasts.loadHornBeasts = () => {
+  HornBeasts.allhornBeast.sort((a, b) => {
+    if (a.title < b.title) {
+      return -1;
+    }
+    if (a.title > b.title) {
+      return 1;
+    }
+  });
   HornBeasts.allhornBeast.forEach(hornBeast => hornBeast.render());
   HornBeasts.createKeywords();
 };
@@ -62,4 +70,3 @@ let queryBeasts = (event) => {
 };
 
 $(()=> HornBeasts.readJson());
-
