@@ -43,17 +43,17 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 8:20am
 
-Finish time: _____
+Finish time: 10:00am
 
-Actual time needed to complete: _____
+Actual time needed to complete: 1 hour 40 minutes
 
 #Feature #2
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 2: Templating
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 10:02am
 
 Finish time: _____
 
