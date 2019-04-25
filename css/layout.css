@@ -1,17 +1,21 @@
+header{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#navigation{
+  display: flex;
+  justify-content: center;
+}
+
 main{
   display: flex;
   flex-flow: row wrap;
-  width: 70%;
-  height: 50%;
+  justify-content: space-around;
 }
 
-
-img{
-  width: 35%;
-  height: auto;
-  border: 10px rgb(21, 55, 6) solid;
+section{
+  width: 30%;
  }
-
-footer{
-  clear: both;
-}
