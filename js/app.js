@@ -2,14 +2,7 @@
 
 let allhornBeastOne = [];
 let allhornBeastTwo = [];
-
-function HornBeasts(hornBeast){
-  this.image_url = hornBeast.image_url;
-  this.title = hornBeast.title;
-  this.description = hornBeast.description;
-  this.keyword = hornBeast.keyword;
-  this.horns = hornBeast.horns;
-}
+let activeDeck = 'allhornBeastOne';
 
 function HornBeasts(rawDataObject){
   for(let key in rawDataObject){
@@ -24,21 +17,23 @@ HornBeasts.prototype.toHtml = function() {
 };
 
 $('li').click((event) => {
+  console.log('hello');
   $('#beasts').empty();
 
   if (event.target.id === 'galOne') {
     allhornBeastOne.forEach(newHornBeastObject => {
+      activeDeck = 'allhornBeastOne';
       $('#beasts').append(newHornBeastObject.toHtml());
     });
     createKeywords('one');
   } else {
     allhornBeastTwo.forEach(newHornBeastObject => {
+      activeDeck = 'allhornBeastTwo';
       $('#beasts').append(newHornBeastObject.toHtml());
     });
     createKeywords('two');
   }
 });
-
 
 let createKeywords = (val) => {
   const keywordObj = {};
@@ -81,6 +76,32 @@ let sortEverything = () => {
       }
     });
   });
+
+  if (activeDeck === 'allhornBeastOne') {
+    $('#galOne').click();
+  } else {
+    $('#galTwo').click();
+  }
+};
+
+let sortReverse = () => {
+  let arr = [allhornBeastOne, allhornBeastTwo];
+
+  arr.forEach(beastArr => {
+    beastArr.sort((a, b) => {
+      if (a.title < b.title) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  });
+
+  if (activeDeck === 'allhornBeastOne') {
+    $('#galOne').click();
+  } else {
+    $('#galTwo').click();
+  }
 };
 
 dataSetOne.forEach(dataSetObject => {
@@ -101,4 +122,12 @@ dataSetTwo.forEach(dataSetObject => {
 
 allhornBeastOne.forEach(newHornBeastObject => {
   $('#beasts').append(newHornBeastObject.toHtml());
+});
+
+$('form').on('change', (event) => {
+  if (event.target.id === 'alphabetical') {
+    sortEverything();
+  } else {
+    sortReverse();
+  }
 });
