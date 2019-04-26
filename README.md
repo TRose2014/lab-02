@@ -66,9 +66,9 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 10:02am
 
-Finish time: _____
+Finish time: 12:00
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 hours
 
 #Feature #3
 
@@ -86,11 +86,11 @@ Actual time needed to complete: 25 minutes
 
 Number and name of feature: Feature 4: Sort the images
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 30 minutes
 
-Start time: 
+Start time: 8:15
 
-Finish time: 
+Finish time: 8:30
 
-Actual time needed to complete: 
+Actual time needed to complete: 15 minutes
 
