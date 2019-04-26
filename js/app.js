@@ -3,6 +3,13 @@
 let allhornBeastOne = [];
 let allhornBeastTwo = [];
 
+function HornBeasts(hornBeast){
+  this.image_url = hornBeast.image_url;
+  this.title = hornBeast.title;
+  this.description = hornBeast.description;
+  this.keyword = hornBeast.keyword;
+  this.horns = hornBeast.horns;
+}
 
 function HornBeasts(rawDataObject){
   for(let key in rawDataObject){
@@ -19,7 +26,7 @@ HornBeasts.prototype.toHtml = function() {
 $('li').click((event) => {
   $('#beasts').empty();
 
-  if (event.target.id === "galOne") {
+  if (event.target.id === 'galOne') {
     allhornBeastOne.forEach(newHornBeastObject => {
       $('#beasts').append(newHornBeastObject.toHtml());
     });
@@ -31,6 +38,7 @@ $('li').click((event) => {
     createKeywords('two');
   }
 });
+
 
 let createKeywords = (val) => {
   const keywordObj = {};
