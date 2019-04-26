@@ -1,12 +1,21 @@
-img{
-  width: 35%;
-  height: auto;
-  border: 10px rgb(21, 55, 6) solid;
- }
-section{
-  float: left;
+header{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-footer{
-  clear: both;
+#navigation{
+  display: flex;
+  justify-content: center;
 }
+
+main{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+section{
+  width: 30%;
+ }

@@ -1,8 +1,27 @@
 @import url("./layout.css");
+@import url("./modules.css");
 
 h1, h2{
   font-family: 'Sigmar One', cursive;
 }
+
+h1{
+  font-size: 48px;
+}
+
+h2{
+  font-size: 36px;
+}
+
+p, li{
+  font-size: 20px;
+}
+
 body{
   background-color: cadetblue;
+}
+
+
+#optionsList{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

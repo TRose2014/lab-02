@@ -1,4 +1,4 @@
-[
+let dataSetTwo = [
   {
     "image_url": "http://cdn.shopify.com/s/files/1/0288/5332/files/jackalope_in_the_wild_large.jpg?11502701639502724114",
     "title": "Jackalope",
